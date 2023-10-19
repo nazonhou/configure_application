@@ -1,0 +1,19 @@
+---
+# tasks file for roles/configure_application
+- name: "Create application configuration file .env"
+  ansible.builtin.template:
+    src: .env.j2
+    dest: "{{ dest }}/app/.env"
+    force: true
+
+- name: "Create root configuration file .env"
+  ansible.builtin.template:
+    src: .env.root.j2
+    dest: "{{ dest }}/.env"
+    force: true
+
+- name: "Create nginx configuration file default.conf"
+  ansible.builtin.template:
+    src: default.conf.j2
+    dest: "{{ dest }}/docker/nginx/default.conf"
+    force: true

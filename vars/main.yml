@@ -1,0 +1,16 @@
+---
+# vars file for roles/configure_application
+app_name: "Deploy laravel application with ansible"
+app_env: prod
+app_debug: false
+app_url: "https://laravel-ansible.sbin.local"
+app_port: 443
+db_connection: pgsql
+db_host: postgres
+db_port: 5432
+db_database: laravel
+db_username: laravel
+db_password: laravel
+app_domain_name: laravel-ansible.sbin.local
+app_service_name: laravel-ansible
+container_uid: 1000
